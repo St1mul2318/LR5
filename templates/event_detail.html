@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ event.name_of_event }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ event.name_of_event }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID мероприятия: {{ event.id }}</b> </p>
+        <p><b>Название мероприятия: {{ event.name_of_event }}</b> </p>
+        <p><b>Дата мероприятия: {{ event.date_of_event }}</b> </p>
+        <p><b>Отметка о выполнении мероприятия: {{ event.mark_of_complete }}</b> </p>
+        <p><b>Название приказа: {{ event.name_of_order }}</b> </p>
+        <a href="/event/{{ event.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/event/{{ event.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

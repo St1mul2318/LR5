@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения подразделения
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение подразделения</h1>
+    <form method="post">
+        <input type="text" name="name_of_department" id="name_of_department" class="form-control" value="{{ department.name_of_department }}" placeholder="Введите название подразделения"><br>
+        <input type="text" name="adress_of_department" id="adress_of_department" class="form-control" value="{{ department.adress_of_department }}" placeholder="Введите адрес корреспондента"><br>
+        <input  type="number" name="number_of_department" id="number_of_department" class="form-control" value="{{ department.number_of_department }}" placeholder="Введите номер подразделения"><br>
+
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

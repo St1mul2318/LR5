@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1 style="color:white">Основные вкладки сайта:</h1>
+    <h3>Информация о Корреспонденте - <a class="btn btn-warning" href="/correspondents">Посмотреть</a></h3>
+    <h3>Информация о Мероприятиях - <a class="btn btn-warning" href="/event">Посмотреть</a></h3>
+    <h3>Информация о Подразделениях - <a class="btn btn-warning" href="/department">Посмотреть</a></h3>
+    <h3>Информация о Приказах - <a class="btn btn-warning" href="/order">Посмотреть</a></h3>
+    <h3>Информация о Резервировании - <a class="btn btn-warning" href="/backup">Посмотреть</a></h3>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения мероприятия
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение мероприятия</h1>
+    <form method="post">
+        <input type="text" name="name_of_event" id="name_of_event" class="form-control" value="{{ event.name_of_event }}" placeholder="Введите название мероприятия"><br>
+        <input type="date" name="date_of_event" id="date_of_event" class="form-control" value="{{ event.date_of_event }}" placeholder="Введите дату мероприятия"><br>
+        <input  type="text" name="mark_of_complete" id="mark_of_complete" class="form-control" value="{{ event.mark_of_complete }}" placeholder="Отметка о выполнении (выполнено/не выполнено)"><br>
+        <input  type="text" name="name_of_order" id="name_of_order" class="form-control" value="{{ event.name_of_order }}" placeholder="Название приказа"><br>
+
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

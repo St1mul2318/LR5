@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница про мероприятия
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Страница про мероприятия</h1>
+    <a class="btn btn-primary" href="/create_event">Добавить мероприятие</a>
+
+     {% if event|length > 0 %}
+        {% for elements in event %}
+            <div class="alert alert-info">
+                <h3>{{ elements.name_of_event }}</h3>
+                <a href="/event/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлено ни одно мероприятие</p>
+    {% endif %}
+
+</div>
+{% endblock %}

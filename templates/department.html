@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница про подразделения
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5">
+<h1>Страница про подразделения</h1>
+    <a class="btn btn-primary" href="/create_department">Добавить подразделение</a>
+
+     {% if department|length > 0 %}
+        {% for elements in department %}
+            <div class="alert alert-info">
+                <h3>{{ elements.name_of_department }}</h3>
+                <a href="/department/{{ elements.id }}" class="btn btn-success">Детальнее</a>
+            </div>
+        {% endfor %}
+    {% else %}
+    <p>Еще не добавлено ни одно подразделение</p>
+    {% endif %}
+
+</div>
+{% endblock %}

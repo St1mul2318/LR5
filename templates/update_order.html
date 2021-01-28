@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения корреспондента
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение корреспондента</h1>
+    <form method="post">
+        <input type="text" name="name_of_order" id="name_of_order" class="form-control" value="{{ order.name_of_order }}" placeholder="Введите название приказа"><br>
+        <input  type="date" name="date_of_order" id="date_of_order" class="form-control" value="{{ order.date_of_order }}" placeholder="Введите дату приказа"/><br>
+        <input type="text" name="content_of_order" id="content_of_order" class="form-control" value="{{ order.content_of_order }}" placeholder="Введите содержание приказа"><br>
+        <input type="text" name="responsible_of_order" id="responsible_of_order" class="form-control" value="{{ order.responsible_of_order }}" placeholder="Введите ответственного за приказ"><br>
+        <input type="number" name="number_of_order" id="number_of_order" class="form-control" value="{{ order.number_of_order }}" placeholder="Введите номер приказа"><br>
+        <input type="text" name="signature" id="signature" class="form-control" value="{{ order.signature }}" placeholder="Введите подпись сотрудника"><br>
+        <input type="text" name="name_of_correspondents" id="name_of_correspondents" class="form-control" value="{{ order.name_of_correspondents }}" placeholder="Введите имя корреспондента"><br>
+        
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

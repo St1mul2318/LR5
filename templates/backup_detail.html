@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ backup.id }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ backup.id }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID резервирования: {{ backup.id }}</b> </p>
+        <p><b>Дата резервирования: {{ backup.backupdate }}</b> </p>
+        <a href="/backup/{{ backup.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/backup/{{ backup.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

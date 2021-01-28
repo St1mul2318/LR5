@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ correspondents.name_of_correspondents }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ correspondents.name_of_correspondents }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID корреспондента: {{ correspondents.id }}</b> </p>
+        <p><b>Имя корреспондента: {{ correspondents.name_of_correspondents }}</b> </p>
+        <p><b>Дата рождения корреспондента: {{ correspondents.birthday }}</b> </p>
+        <p><b>Адрес корреспондента: {{ correspondents.adress_of_correspondents }}</b> </p>
+        <p><b>Должность корреспондента: {{ correspondents.position }}</b> </p>
+        <p><b>Название подразделения: {{ correspondents.name_of_department }}</b> </p>
+        <a href="/correspondents/{{ correspondents.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/correspondents/{{ correspondents.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

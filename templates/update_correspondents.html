@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения корреспондента
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение корреспондента</h1>
+    <form method="post">
+        <input type="text" name="name_of_correspondents" id="name_of_correspondents" class="form-control" value="{{ correspondents.name_of_correspondents }}" placeholder="Введите имя корреспондента"><br>
+        <input  type="date" name="birthday" id="birthday" class="form-control" value="{{ correspondents.birthday }}" placeholder="Введите дату рождения"/><br>
+        <input type="text" name="adress_of_correspondents" id="adress_of_correspondents" class="form-control" value="{{ correspondents.adress_of_correspondents }}" placeholder="Введите адрес корреспондента"><br>
+        <input type="text" name="position" id="position" class="form-control" value="{{ correspondents.position }}" placeholder="Введите должность корреспондента"><br>
+        <input type="text" name="name_of_department" id="name_of_department" class="form-control" value="{{ correspondents.name_of_department }}" placeholder="Введите название подразделения"><br>
+
+
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

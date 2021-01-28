@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для изменения резервирования данных
+{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5">
+    <h1>Изменение резервирования данных</h1>
+    <form method="post">
+        <input type="number" name="id" id="id" class="form-control" value="{{ backup.id }}" placeholder="Введите ID резервирования"><br>
+        <input type="date" name="backupdate" id="backupdate" class="form-control" value="{{ backup.backupdate }}" placeholder="Введите дату резервирования"><br>
+    
+        <p><input type="submit" value="Обновить" class="btn btn-success"/></p>
+
+    </form>
+</div>
+
+{% endblock %}

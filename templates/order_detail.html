@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ order.name_of_order }}
+{% endblock %}
+
+
+{% block body %}
+<div class="container mt-5"></div>
+    <h1>{{ order.name_of_order }}</h1>
+
+    <div class="alert alert-info">
+        <p><b>ID приказа: {{ order.id }}</b> </p>
+        <p><b>Название приказа: {{ order.name_of_order }}</b> </p>
+        <p><b>Дата приказа: {{ order.date_of_order }}</b> </p>
+        <p><b>Содержание приказа: {{ order.content_of_order }}</b> </p>
+        <p><b>Ответственный за приказ: {{ order.responsible_of_order}}</b> </p>
+        <p><b>Номер приказа: {{ order.number_of_order }}</b> </p>
+        <p><b>Подпись сотрудника: {{ order.signature }}</b> </p>
+        <p><b>Имя корреспондента: {{ order.name_of_correspondents }}</b> </p>
+        <a href="/order/{{ order.id }}/delete" class="btn btn-danger">Удалить</a>
+        <a href="/order/{{ order.id }}/update" class="btn btn-success">Редактировать</a>
+    </div>
+{% endblock %}

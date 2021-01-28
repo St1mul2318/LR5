@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Страница для создания мероприятия
+{% endblock %}
+
+{% block body %}
+
+<div class="container nt-5">
+    <h1>Добавление мероприятия</h1>
+    <form method="post">
+        <input type="number" name="id" id="id" class="form-control" placeholder="Введите id мероприятия"><br>
+        <input type="text" name="name_of_event" id="name_of_event" class="form-control" placeholder="Введите название мероприятия"><br>
+        <input type="date" name="date_of_event" id="date_of_event" class="form-control" placeholder="Введите дату мероприятия"><br>
+        <input type="text" name="mark_of_complete" id="mark_of_complete" class="form-control" placeholder="Отметка о выполнении (выполнено или не выполнено)"><br>
+        <input type="text" name="name_of_order" id="name_of_order" class="form-control" placeholder="Название приказа"><br>
+
+        <p><input type="submit" value="Отправить" class="btn btn-success"></p>
+
+    </form>
+</div>
+
+{% endblock %}
